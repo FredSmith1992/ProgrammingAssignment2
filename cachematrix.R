@@ -1,15 +1,36 @@
-## Put comments here that give an overall description of what your
-## functions do
+## cachematrix.R is the program we create for our Programming Assignment 2
+## it serves to teach us about using functions as arguments and storing data in another context or frame
+## it has two functions, makeCacheMatrix() and cacheSolve()
 
-## Write a short comment describing this function
+## makeCacheMatrix holds the previously calculated value, if any, and the functions to check for, save and return it
+
+## makeCacheMatrix() is the context in which the previously calculated value, if any, and the functions to check for, save and return it
 
 makeCacheMatrix <- function(x = matrix()) {
-
+     m <- NULL
+     set <- function(y) {
+         x <<- y
+         m <<- NULL
+     }
+     get <- function() x
+     setsolve <- function(solve) m <<- solve
+     getsolve <- function() m
+     list(set = set, get = get,
+          setsolve = setsolve,
+          getsolve = getsolve)
 }
 
 
-## Write a short comment describing this function
+## cacheSolve() uses makeCacheMatrix to shortcut the calculation by using a previously saved value and also performs the matrix inversion if it hadn't previously been performed
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-}
+     m <- x$getsolve()
+     if(!is.null(m)) {
+         message("getting cached data")
+         return(m)
+     }
+     data <- x$get()
+     m <- solve(data, ...)
+     x$setsolve(m)
+     m
+ }
