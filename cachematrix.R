@@ -21,7 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve() uses makeCacheMatrix to shortcut the calculation by using a previously saved value and also performs the matrix inversion if it hadn't previously been performed
+## cacheSolve() uses the makeCacheMatrix function to shortcut the calculation by using a previously saved value and also performs the matrix inversion if it hadn't previously been performed
 
 cacheSolve <- function(x, ...) {
      m <- x$getsolve()
