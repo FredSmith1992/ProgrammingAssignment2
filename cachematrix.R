@@ -1,6 +1,11 @@
-## cachematrix.R is the program we create for our Programming Assignment 2
+# cachematrix.R
+
+## cachematrix.R is the program we are to deliver for Programming Assignment 2 in Coursera's R Programming course.
+## It is based on a similar set of caching functions providing in rdpeng's original project,
+## which we forked from https://github.com/rdpeng/ProgrammingAssignment2 to create our own.
+
 ## it serves to teach us about using functions as arguments and storing data in another context or frame
-## it has two functions, makeCacheMatrix() and cacheSolve()
+## it has two primary functions, makeCacheMatrix() and cacheSolve(), which are used to get and set results
 
 ## makeCacheMatrix holds the previously calculated value, if any, and the functions to check for, save and return it
 
@@ -21,7 +26,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve() uses the makeCacheMatrix function to shortcut the calculation by using a previously saved value and also performs the matrix inversion if it hadn't previously been performed
+## cacheSolve() uses the functions in makeCacheMatrix()'s context  to shortcut the calculation by using a previously saved value if available
+## if it hadn't been previously performed, it performs the matrix inversion, which is done by calling solve().
 
 cacheSolve <- function(x, ...) {
      m <- x$getsolve()
