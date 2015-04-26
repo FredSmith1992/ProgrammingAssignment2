@@ -1,13 +1,13 @@
 # cachematrix.R
 #
 #(c)2015 FredSmith1992 (at least, on github!)
-#
+
 # cachematrix.R is the program we are to deliver for Programming Assignment 2 in Coursera's R Programming course.
 # It is based on a similar set of caching functions providing in rdpeng's original project,
 # which we forked from https://github.com/rdpeng/ProgrammingAssignment2 to create our own.
-#
+
 # The purpose of this assignment is to teach us about using functions as arguments and storing data in another context.
-#
+
 # Usage:
 # 1) Execute this script to create the functions and their environments
 # 2) create a matrix and store it. We will assume it is called matrixOne for purposes of this usage explanation
@@ -30,10 +30,10 @@
 # [2,] -0.1  0.01632653  0.02244898
 # [3,] -0.1 -0.04489796  0.06326531
 # >
+
 # This script has two primary functions, makeCacheMatrix() and cacheSolve(), which are used to set and get results
-#
+
 # makeCacheMatrix holds the previously calculated value, if any, and the functions to check for, save and return it
-#
 # makeCacheMatrix() is the context in which the previously calculated value, if any, and the functions to check for, save and return it
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -65,4 +65,3 @@ cacheSolve <- function(x, ...) {
      x$setsolve(m)
      m
  }
- 
