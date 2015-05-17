@@ -2,7 +2,6 @@
 #
 #(c)2015 FredSmith1992 (at least, on github!)
 
-
 # cachematrix.R is the program we are to deliver for Programming Assignment 2 in Coursera's R Programming course.
 # It is based on a similar set of caching functions providing in rdpeng's original project,
 # which we forked from https://github.com/rdpeng/ProgrammingAssignment2 to create our own.
