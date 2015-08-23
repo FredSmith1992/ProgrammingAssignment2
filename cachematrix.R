@@ -1,6 +1,6 @@
 # cachematrix.R
 #
-#(c)2015 FredSmith1992 (at least, on github!)
+#(c)2015 FredSmith1992 on github
 
 # cachematrix.R is the program we are to deliver for Programming Assignment 2 in Coursera's R Programming course.
 # It is based on a similar set of caching functions providing in rdpeng's original project,
@@ -65,3 +65,5 @@ cacheSolve <- function(x, ...) {
      x$setsolve(m)
      m
  }
+ 
+ 
